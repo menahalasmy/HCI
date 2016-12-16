@@ -489,7 +489,11 @@ private  int[] getPixelData(BufferedImage img, int i, int j) {
 				System.out.println(getRegion(x, y).getAvaliablepositions().size());
 				getRegion(x, y).getAvaliablepositions().get(index).setLocation(getRegion(x, y).getPositions().get(index));
 				drag = false;
-				label.setIcon(new ImageIcon("desktopresized.png")); 
+				// hena 
+				URL url = Desktop2.class.getResource("/desktopresized.png"");
+				
+			//	ImageIcon iicon = new ImageIcon(url);
+				label.setIcon(new ImageIcon(url)); 
 				if(getRegion(x, y).getName().equals("tree")){
 		/*			ArrayList<JButton> treeIcons = new ArrayList<JButton>();
 				for (int i = 0; i < treeIcons.size(); i++) {
